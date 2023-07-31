@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(130deg, #153677, #4e085f);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.todo-app-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto auto auto;
+    background-color: white;
+    padding: 1em 1em;
+    border-radius: 1em;
+}
+
+.todo-app-wrapper .heading {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.heading h3 {
+    color: #153677;
+}
+
+.heading img {
+    width: 2em;
+}
+
+.todo-app-wrapper .todo-input-field {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    background-color: rgb(235, 235, 235);
+    border-radius: 1.2em;
+    height: 2.8em;
+}
+
+.todo-input-field input {
+    flex: 1;
+    outline: none;
+    border: none;
+    border-radius: inherit;
+    background-color: transparent;
+    height: inherit;
+    padding: 0 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.todo-input-field button {
+    width: 9.4em;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF7044;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: inherit;
+}
+
+.todo-app-wrapper ul.todo-items {
+    margin-top: 2em;
+    list-style-type: none;
+}
+
+ul.todo-items li {
+    font-size: .8rem;
+    color: rgb(85, 85, 85);
+    padding: 14px 8px 12px 40px;
+    position: relative;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.todo-items li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+    top: 12px;
+}
+
+ul.todo-items li.checked {
+    text-decoration: line-through;
+}
+
+ul.todo-items li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+ul.todo-items li span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+ul.todo-items li span:hover {
+    background-color: #edeef0;
+}
